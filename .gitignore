@@ -1,0 +1,15 @@
+# Mengabaikan virtual environment di folder manapun
+env/
+venv/
+
+# Mengabaikan file cache Python (mirip dengan .eslintcache atau .metro-cache)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# File sistem macOS
+.DS_Store
+
+# Mengabaikan file environment variables (jika besok kita pakai API Key)
+.env
