@@ -1,0 +1,6 @@
+id_transaksi,status,waktu_proses_ms,is_error
+TX001,success,120,False
+TX002,failed,4500,True
+TX003,success,150,False
+TX004,success,800,False
+TX005,failed,5200,True

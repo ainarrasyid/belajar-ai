@@ -1,0 +1,8 @@
+kurir_id,rute_api,status,waktu_proses_ms
+K001,/api/pickup,success,120
+K002,/api/dropoff,success,250
+K003,/api/pickup,failed,
+K001,/api/dropoff,,300
+K004,/api/pickup,success,140
+K002,/api/dropoff,success,210
+K005,/api/sync_location,failed,

@@ -1,0 +1,14 @@
+[
+  {
+    "id_transaksi":"TX002",
+    "status":"failed",
+    "waktu_proses_ms":4500,
+    "is_error":true
+  },
+  {
+    "id_transaksi":"TX005",
+    "status":"failed",
+    "waktu_proses_ms":5200,
+    "is_error":true
+  }
+]
