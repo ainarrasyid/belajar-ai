@@ -1,6 +1,7 @@
 # Mengabaikan virtual environment di folder manapun
 env/
 venv/
+db_data/
 
 # Mengabaikan file cache Python (mirip dengan .eslintcache atau .metro-cache)
 __pycache__/
