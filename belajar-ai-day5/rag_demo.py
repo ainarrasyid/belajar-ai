@@ -31,15 +31,21 @@ Pertanyaan Pengguna: {pertanyaan_user}
 Jawabanmu:
 """
 
-# 3. GENERATION (MENGGUNAKAN OLLAMA LOKAL)
-print("\nSedang memikirkan jawaban (menggunakan akselerasi GPU M1)...")
+# 3. GENERATION (MENGGUNAKAN OLLAMA LOKAL DENGAN STREAMING)
+print("\n=== 🤖 JAWABAN AI (Llama 3) KE PENGGUNA ===")
 
-# Memanggil model Llama 3 yang sudah berjalan di localhost
-response = ollama.generate(
+# Kita tambahkan parameter stream=True
+stream_response = ollama.generate(
     model='llama3',
-    prompt=prompt_untuk_llm
+    prompt=prompt_untuk_llm,
+    stream=True # Ini adalah kunci rahasianya!
 )
 
-print("\n=== 🤖 JAWABAN AI (Llama 3) KE PENGGUNA ===")
-# Ollama mengembalikan dictionary, kita ambil key 'response'-nya
-print(response['response'])
+# Alih-alih menunggu satu string utuh, kita menangkap setiap 'chunk' (potongan kata)
+# yang dilemparkan oleh Ollama secara real-time.
+for chunk in stream_response:
+    # end='' mencegah Python membuat baris baru setiap kali print
+    # flush=True memaksa terminal untuk langsung menampilkan teks detik itu juga
+    print(chunk['response'], end='', flush=True)
+
+print("\n") # Memberikan jarak baris baru setelah AI selesai mengetik semua jawaban
