@@ -38,7 +38,10 @@ print("\n=== 🤖 JAWABAN AI (Llama 3) KE PENGGUNA ===")
 stream_response = ollama.generate(
     model='llama3',
     prompt=prompt_untuk_llm,
-    stream=True # Ini adalah kunci rahasianya!
+    stream=True, # Ini adalah kunci rahasianya!
+    options={
+        "temperature": 0.0
+    }
 )
 
 # Alih-alih menunggu satu string utuh, kita menangkap setiap 'chunk' (potongan kata)
